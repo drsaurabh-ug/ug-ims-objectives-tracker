@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="company-info">
+                    <h1 id="company-name">Loading...</h1>
+                    <p id="company-tagline">Loading...</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <!-- Theme toggle removed - single corporate theme -->
+            </div>
+            <div class="header-meta">
+                <div class="meta-item">
+                    <span class="label">Format No:</span>
+                    <span class="value" id="meta-format-no">--</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Document No:</span>
+                    <span class="value" id="meta-doc-no">--</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Issue:</span>
+                    <span class="value" id="meta-issue">--</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Revision:</span>
+                    <span class="value" id="meta-revision">--</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Effective Date:</span>
+                    <span class="value" id="meta-effective-date">--</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Review Period:</span>
+                    <span class="value" id="meta-review-period">--</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#dashboard" class="active" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#quality" data-section="quality"><i class="fas fa-certificate"></i> Quality Objectives</a></li>
+            <li><a href="#environmental" data-section="environmental"><i class="fas fa-leaf"></i> Environmental Objectives</a></li>
+            <li><a href="#ohns" data-section="ohns"><i class="fas fa-hard-hat"></i> OH&S Objectives</a></li>
+            <li><a href="#summary" data-section="summary"><i class="fas fa-chart-pie"></i> Annual Summary</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+            <div class="section-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Executive Dashboard</h2>
+                <p class="last-updated">Loading...</p>
+            </div>
+
+            <div class="divisions-overview" id="divisions-container">
+                <!-- Division cards populated by JavaScript -->
+            </div>
+
+            <div class="dashboard-charts">
+                <div class="chart-container">
+                    <h3 id="performance-title">Overall IMS Performance</h3>
+                    <div class="performance-bars">
+                        <div class="perf-item">
+                            <span class="perf-label">Quality Management</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill quality" style="width: 0%"></div>
+                            </div>
+                            <span class="perf-value">--%</span>
+                        </div>
+                        <div class="perf-item">
+                            <span class="perf-label">Environmental Management</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill environmental" style="width: 0%"></div>
+                            </div>
+                            <span class="perf-value">--%</span>
+                        </div>
+                        <div class="perf-item">
+                            <span class="perf-label">OH&S Management</span>
+                            <div class="perf-bar">
+                                <div class="perf-fill safety" style="width: 0%"></div>
+                            </div>
+                            <span class="perf-value">--%</span>
+                        </div>
+                    </div>
+                    <div class="perf-note" style="margin-top: 1.5rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 100%); border-left: 4px solid var(--accent-color); border-radius: 4px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-info-circle" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                        <span style="font-size: 0.85rem; color: var(--text-dark); font-style: italic;">Environmental &amp; OH&S scores reflect partial data as formal tracking was initiated in Oct 2025.</span>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 id="highlights-title">Key Highlights</h3>
+                    <div class="highlights-list">
+                        <div class="highlight">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading highlights...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Objectives Section -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-certificate"></i> Quality Objectives - ISO 9001:2015</h2>
+                <div class="filter-controls">
+                    <select id="quality-division-filter">
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            <div id="quality-content"></div>
+        </section>
+
+        <!-- Environmental Objectives Section -->
+        <section id="environmental" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-leaf"></i> Environmental Objectives - ISO 14001:2015</h2>
+                <div class="filter-controls">
+                    <select id="env-division-filter">
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            <div id="environmental-content"></div>
+        </section>
+
+        <!-- OH&S Objectives Section -->
+        <section id="ohns" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-hard-hat"></i> OH&S Objectives - ISO 45001:2018</h2>
+                <div class="filter-controls">
+                    <select id="ohns-division-filter">
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            <div id="ohns-content"></div>
+        </section>
+
+        <!-- Annual Summary Section -->
+        <section id="summary" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-pie"></i> Annual Summary & Audit Trail</h2>
+            </div>
+            <div id="summary-content"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section" id="footer-doc-control">
+                <h4>Document Control</h4>
+                <p>Loading...</p>
+            </div>
+            <div class="footer-section" id="footer-references">
+                <h4>References</h4>
+                <p>Loading...</p>
+            </div>
+            <div class="footer-section" id="footer-contact">
+                <h4>Contact</h4>
+                <p>Loading...</p>
+            </div>
+        </div>
+        <div class="footer-bottom" id="footer-copyright">
+            <p>Loading...</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
